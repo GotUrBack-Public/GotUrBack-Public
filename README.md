@@ -8,7 +8,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/FOCUS-Security%20Research-8A2BE2?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Security Researcher" />
-  <img src="https://img.shields.io/badge/LOCATION-Germany-000000?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Germany" />
+  <img src="https://img.shields.io/badge/LOCATION-Frankfurt%2C%20Germany-000000?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Frankfurt, Germany" />
 </p>
 
 <!-- ACCOUNT_METRICS_START -->
