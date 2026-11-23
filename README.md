@@ -27,8 +27,14 @@
 
 I'm a **Security Researcher** focused on exploring systems, understanding vulnerabilities, and building tools that support security research and development.
 
-- **Role:** Security Researcher
-- **Location:** Germany
+<div align="center">
+  <a href="https://en.wikipedia.org/wiki/Security_hacker">
+    <img src="https://img.shields.io/badge/Role-Security%20Researcher-8A2BE2?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Security Researcher — read the explanation on Wikipedia" />
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Frankfurt%2C%20Germany">
+    <img src="https://img.shields.io/badge/Location-Frankfurt%2C%20Germany-4285F4?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Frankfurt, Germany — open in Google Maps" />
+  </a>
+</div>
 
 <div align="center">
   <a href="https://github.com/GotUrBack-Public">
