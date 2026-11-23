@@ -11,9 +11,13 @@
   <img src="https://img.shields.io/badge/LOCATION-Germany-000000?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Germany" />
 </p>
 
+<!-- ACCOUNT_METRICS_START -->
 <p>
-  <img src="https://img.shields.io/github/followers/GotUrBack-Public?style=for-the-badge&logo=github&label=Followers" alt="GitHub followers" />
+  <img src="https://img.shields.io/badge/Followers-2-0969DA?style=for-the-badge&logo=github" alt="GitHub followers" />
+  <img src="https://img.shields.io/badge/Total%20Stars-0-0969DA?style=for-the-badge&logo=github" alt="Total repository stars" />
+  <img src="https://img.shields.io/badge/Total%20Forks-0-0969DA?style=for-the-badge&logo=github" alt="Total repository forks" />
 </p>
+<!-- ACCOUNT_METRICS_END -->
 
 </div>
 
@@ -58,6 +62,14 @@ My primary project. Check out the repository for its source code, documentation,
   <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
 </p>
+
+## Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=GotUrBack-Public&theme=github-compact&hide_border=true&area=true" alt="GitHub contribution activity graph" />
+
+</div>
 
 ---
 
