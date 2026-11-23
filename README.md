@@ -13,9 +13,9 @@
 
 <!-- ACCOUNT_METRICS_START -->
 <p>
-  <img src="https://img.shields.io/badge/Followers-2-0969DA?style=for-the-badge&logo=github" alt="GitHub followers" />
-  <img src="https://img.shields.io/badge/Total%20Stars-0-0969DA?style=for-the-badge&logo=github" alt="Total repository stars" />
-  <img src="https://img.shields.io/badge/Total%20Forks-0-0969DA?style=for-the-badge&logo=github" alt="Total repository forks" />
+  <img src="https://img.shields.io/badge/Followers-2-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="Followers">
+  <img src="https://img.shields.io/badge/Total_Stars-12-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="Total Stars">
+  <img src="https://img.shields.io/badge/Total_Forks-1-0969DA?style=for-the-badge&logo=github&logoColor=white" alt="Total Forks">
 </p>
 <!-- ACCOUNT_METRICS_END -->
 
