@@ -7,14 +7,12 @@
 ### Security Researcher · Developer · Open-Source Enthusiast
 
 <p>
-  <img src="https://img.shields.io/badge/Focus-Security%20Research-8A2BE2?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Security Researcher" />
-  <img src="https://img.shields.io/badge/Location-Germany-000000?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Germany" />
+  <img src="https://img.shields.io/badge/FOCUS-Security%20Research-8A2BE2?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Security Researcher" />
+  <img src="https://img.shields.io/badge/LOCATION-Germany-000000?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Germany" />
 </p>
 
 <p>
   <img src="https://img.shields.io/github/followers/GotUrBack-Public?style=for-the-badge&logo=github&label=Followers" alt="GitHub followers" />
-  <img src="https://img.shields.io/github/stars/GotUrBack-Public?affiliations=OWNER&style=for-the-badge&logo=github&label=Total%20Stars" alt="Total stars" />
-  <img src="https://img.shields.io/github/forks/GotUrBack-Public?affiliations=OWNER&style=for-the-badge&logo=github&label=Total%20Forks" alt="Total forks" />
 </p>
 
 </div>
@@ -36,7 +34,16 @@ I'm a **Security Researcher** focused on exploring systems, understanding vulner
 
 ### [MForce Enhanced Framework](https://github.com/GotUrBack-Public/MForce-Enhanced-Framework)
 
-[![MForce](https://img.shields.io/badge/MAIN%20PROJECT-MForce%20Enhanced%20Framework-00AEEF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GotUrBack-Public/MForce-Enhanced-Framework)
+[![Main Project](https://img.shields.io/badge/MAIN%20PROJECT-MForce%20Enhanced%20Framework-00AEEF?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GotUrBack-Public/MForce-Enhanced-Framework)
+
+<p>
+  <a href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework">
+    <img src="https://img.shields.io/github/stars/GotUrBack-Public/MForce-Enhanced-Framework?style=for-the-badge&logo=github&label=MForce%20Stars" alt="MForce stars" />
+  </a>
+  <a href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework">
+    <img src="https://img.shields.io/github/forks/GotUrBack-Public/MForce-Enhanced-Framework?style=for-the-badge&logo=github&label=MForce%20Forks" alt="MForce forks" />
+  </a>
+</p>
 
 My primary project. Check out the repository for its source code, documentation, and latest updates.
 
@@ -51,14 +58,6 @@ My primary project. Check out the repository for its source code, documentation,
   <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
 </p>
-
-## GitHub Statistics
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=GotUrBack-Public&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true" alt="GitHub statistics" />
-
-</div>
 
 ---
 
