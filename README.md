@@ -76,6 +76,10 @@ My primary project. Check out the repository for its source code, documentation,
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
 </p>
 
+## GitHub Achievements
+
+View my GitHub profile achievements and badges on the [Achievements tab](https://github.com/GotUrBack-Public?tab=achievements).
+
 ## Contribution Activity
 
 <div align="center">
