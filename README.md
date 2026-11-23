@@ -67,7 +67,7 @@ My primary project. Check out the repository for its source code, documentation,
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=GotUrBack-Public&theme=github-compact&hide_border=true&area=true" alt="GitHub contribution activity graph" />
+<img src="https://ghchart.rshah.org/40916c/GotUrBack-Public" alt="GitHub contribution calendar" />
 
 </div>
 
