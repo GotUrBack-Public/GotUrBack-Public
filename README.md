@@ -29,8 +29,15 @@ I'm a **Security Researcher** focused on exploring systems, understanding vulner
 
 - **Role:** Security Researcher
 - **Location:** Germany
-- **GitHub:** [@GotUrBack-Public](https://github.com/GotUrBack-Public)
-- **Contact:** [75336897532579754357a@gmail.com](mailto:75336897532579754357a@gmail.com)
+
+<div align="center">
+  <a href="https://github.com/GotUrBack-Public">
+    <img src="https://img.shields.io/badge/GitHub-GotUrBack--Public-181717?style=for-the-badge&logo=github&logoColor=white" alt="Visit my GitHub profile" />
+  </a>
+  <a href="mailto:75336897532579754357a@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Send me an email" />
+  </a>
+</div>
 
 ## Main Project
 
