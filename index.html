@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d17">
+  <meta name="description" content="GotUrBack-Public — Security Researcher, Developer and Open-Source Enthusiast from Frankfurt, Germany.">
+  <title>GotUrBack-Public | Security Research & Development</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080d17;
+      --panel: #101827;
+      --panel-soft: #0c1422;
+      --line: rgba(148, 163, 184, .16);
+      --text: #e6edf7;
+      --muted: #9aa9bd;
+      --accent: #43d9a3;
+      --purple: #a78bfa;
+      --blue: #60a5fa;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 15% 0%, rgba(67,217,163,.10), transparent 34rem),
+        radial-gradient(ellipse at 90% 8%, rgba(167,139,250,.10), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    .wrap { width: min(1040px, calc(100% - 36px)); margin: 0 auto; }
+    header { padding: 76px 0 44px; text-align: center; }
+    .eyebrow { color: var(--accent); font: 700 .78rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 14px 0 8px; font-size: clamp(2.3rem, 7vw, 4.4rem); line-height: 1.08; letter-spacing: -.055em; }
+    .subtitle { margin: 0 auto 24px; color: var(--muted); font-size: clamp(1rem, 2.5vw, 1.2rem); }
+    .pills, .stats, .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(16,24,39,.72); color: #cbd5e1; font-size: .85rem; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+    .stats { margin-top: 28px; }
+    .stats img, .badge-img { max-width: 100%; height: 28px; }
+    main { padding-bottom: 60px; }
+    section { margin: 18px 0; padding: clamp(20px, 4vw, 32px); border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, rgba(16,24,39,.94), rgba(12,20,34,.94)); box-shadow: 0 18px 55px rgba(0,0,0,.16); }
+    h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-size: 1.25rem; letter-spacing: -.02em; }
+    h2::before { content: ""; width: 4px; height: 21px; border-radius: 4px; background: var(--accent); }
+    p { color: #c1ccda; margin: 0 0 14px; }
+    .project { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; }
+    .project h3 { margin: 0 0 8px; font-size: 1.35rem; }
+    .project p { max-width: 620px; margin: 0; }
+    .button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 16px; border-radius: 10px; background: var(--accent); color: #06130f; font-weight: 750; white-space: nowrap; transition: transform .18s ease, filter .18s ease; }
+    .button:hover { color: #06130f; filter: brightness(1.08); transform: translateY(-2px); }
+    .skills { justify-content: flex-start; }
+    .skill { padding: 8px 13px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel-soft); color: #d7e2ef; font: 600 .9rem ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; }
+    .links a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 9px; color: #cbd5e1; background: var(--panel-soft); }
+    .links a:hover { border-color: rgba(67,217,163,.55); }
+    .contrib { width: 100%; overflow-x: auto; padding: 12px 0 4px; }
+    .contrib img { display: block; min-width: 650px; max-width: 100%; margin: 0 auto; }
+    .note { color: var(--muted); font-size: .88rem; }
+    footer { padding: 24px 0 38px; text-align: center; color: #718096; font-size: .88rem; }
+    @media (max-width: 600px) {
+      header { padding-top: 54px; }
+      .project { align-items: flex-start; flex-direction: column; }
+      .contrib img { margin-left: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="eyebrow">Security · Development · Open Source</div>
+    <h1>Hey, I'm <span style="color:var(--accent)">GotUrBack-Public</span></h1>
+    <p class="subtitle">Security Researcher · Developer · Open-Source Enthusiast</p>
+    <div class="pills">
+      <span class="pill"><span class="dot"></span> Security Research</span>
+      <a class="pill" href="https://www.google.com/maps/search/?api=1&amp;query=Frankfurt%2C%20Germany" target="_blank" rel="noopener noreferrer">⌖ Frankfurt, Germany</a>
+    </div>
+    <div class="stats" aria-label="GitHub account statistics">
+      <img src="https://img.shields.io/github/followers/GotUrBack-Public?style=for-the-badge&amp;logo=github&amp;label=Followers" alt="GitHub followers">
+      <img src="https://img.shields.io/github/stars/GotUrBack-Public?affiliations=OWNER&amp;style=for-the-badge&amp;logo=github&amp;label=Total%20Stars" alt="Total repository stars">
+      <img src="https://img.shields.io/github/forks/GotUrBack-Public/MForce-Enhanced-Framework?style=for-the-badge&amp;logo=github&amp;label=MForce%20Forks" alt="MForce forks">
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a <strong>Security Researcher</strong> focused on exploring systems, understanding vulnerabilities, and building tools that support security research and development.</p>
+      <div class="links">
+        <a href="https://en.wikipedia.org/wiki/Security_hacker" target="_blank" rel="noopener noreferrer">Security Research</a>
+        <a href="https://github.com/GotUrBack-Public" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+        <a href="mailto:75336897532579754357a@gmail.com">Email Contact ↗</a>
+      </div>
+    </section>
+
+    <section id="project">
+      <h2>Main Project</h2>
+      <div class="project">
+        <div>
+          <h3><a href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework" target="_blank" rel="noopener noreferrer">MForce Enhanced Framework ↗</a></h3>
+          <p>My primary project. Explore the source code, documentation, and latest updates in the repository.</p>
+          <div class="stats" style="justify-content:flex-start;margin-top:16px">
+            <a href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/GotUrBack-Public/MForce-Enhanced-Framework?style=for-the-badge&amp;logo=github&amp;label=Stars" alt="MForce stars"></a>
+            <a href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/forks/GotUrBack-Public/MForce-Enhanced-Framework?style=for-the-badge&amp;logo=github&amp;label=Forks" alt="MForce forks"></a>
+          </div>
+        </div>
+        <a class="button" href="https://github.com/GotUrBack-Public/MForce-Enhanced-Framework" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+    </section>
+
+    <section id="technologies">
+      <h2>Languages &amp; Technologies</h2>
+      <div class="skills">
+        <span class="skill">Shell</span><span class="skill">Lua</span><span class="skill">Python</span><span class="skill">Rust</span><span class="skill">Java</span>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <h2>GitHub Achievements</h2>
+      <p>View my GitHub achievements and badges on my profile.</p>
+      <a class="button" href="https://github.com/GotUrBack-Public?tab=achievements" target="_blank" rel="noopener noreferrer">View Achievements ↗</a>
+    </section>
+
+    <section id="activity">
+      <h2>Contribution Activity</h2>
+      <div class="contrib">
+        <img src="https://ghchart.rshah.org/40916c/GotUrBack-Public" alt="GitHub contribution calendar for GotUrBack-Public">
+      </div>
+      <p class="note">Contribution history is provided by GitHub's public contribution graph.</p>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div>Interested in security, research, and building useful tools.</div>
+    <div>© <span id="year">2026</span> GotUrBack-Public</div>
+  </footer>
+</body>
+</html>
