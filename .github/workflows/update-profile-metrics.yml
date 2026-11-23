@@ -1,6 +1,9 @@
 name: Update profile metrics
 
 on:
+  push:
+    paths:
+      - ".github/workflows/update-profile-metrics.yml"
   schedule:
     - cron: "17 6 * * *"
   workflow_dispatch:
@@ -54,32 +57,28 @@ jobs:
                   break
               for repo in repos:
                   if not repo.get("fork", False):
-                      stars += repo.get("stargazers_count", 0)
-                      forks += repo.get("forks_count", 0)
+                      stars += int(repo.get("stargazers_count", 0))
+                      forks += int(repo.get("forks_count", 0))
               if len(repos) < 100:
                   break
               page += 1
 
-          followers = profile.get("followers", 0)
-
           def badge(label, value):
-              label = label.replace("-", "--").replace("_", "__").replace(" ", "%20")
               return (
                   f'<img src="https://img.shields.io/badge/{label}-{value}-0969DA'
-                  '?style=for-the-badge&logo=github" '
-                  f'alt="{label}">'
+                  '?style=for-the-badge&logo=github&logoColor=white" '
+                  f'alt="{label.replace("_", " ")}">'
               )
 
           metrics = "\n".join([
               "<p>",
-              f'  {badge("Followers", followers)}',
-              f'  {badge("Total Stars", stars)}',
-              f'  {badge("Total Forks", forks)}',
+              f'  {badge("Followers", profile.get("followers", 0))}',
+              f'  {badge("Total_Stars", stars)}',
+              f'  {badge("Total_Forks", forks)}',
               "</p>",
           ])
 
-          path = "README.md"
-          with open(path, encoding="utf-8") as file:
+          with open("README.md", encoding="utf-8") as file:
               readme = file.read()
 
           pattern = r"<!-- ACCOUNT_METRICS_START -->.*?<!-- ACCOUNT_METRICS_END -->"
@@ -92,9 +91,8 @@ jobs:
           if count != 1:
               raise SystemExit("Could not find account metrics markers in README.md")
 
-          if updated != readme:
-              with open(path, "w", encoding="utf-8") as file:
-                  file.write(updated)
+          with open("README.md", "w", encoding="utf-8") as file:
+              file.write(updated)
           PY
 
       - name: Commit updated badges
