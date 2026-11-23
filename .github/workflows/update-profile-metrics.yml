@@ -1,0 +1,110 @@
+name: Update profile metrics
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+
+      - name: Update account-wide badges
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+
+          username = "GotUrBack-Public"
+          token = os.environ["GH_TOKEN"]
+
+          def github_json(url):
+              request = urllib.request.Request(
+                  url,
+                  headers={
+                      "Accept": "application/vnd.github+json",
+                      "Authorization": f"Bearer {token}",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                  },
+              )
+              with urllib.request.urlopen(request) as response:
+                  return json.load(response)
+
+          profile = github_json(f"https://api.github.com/users/{username}")
+          stars = 0
+          forks = 0
+          page = 1
+
+          while True:
+              repos = github_json(
+                  f"https://api.github.com/users/{username}/repos"
+                  f"?type=owner&per_page=100&page={page}"
+              )
+              if not repos:
+                  break
+              for repo in repos:
+                  if not repo.get("fork", False):
+                      stars += repo.get("stargazers_count", 0)
+                      forks += repo.get("forks_count", 0)
+              if len(repos) < 100:
+                  break
+              page += 1
+
+          followers = profile.get("followers", 0)
+
+          def badge(label, value):
+              label = label.replace("-", "--").replace("_", "__").replace(" ", "%20")
+              return (
+                  f'<img src="https://img.shields.io/badge/{label}-{value}-0969DA'
+                  '?style=for-the-badge&logo=github" '
+                  f'alt="{label}">'
+              )
+
+          metrics = "\n".join([
+              "<p>",
+              f'  {badge("Followers", followers)}',
+              f'  {badge("Total Stars", stars)}',
+              f'  {badge("Total Forks", forks)}',
+              "</p>",
+          ])
+
+          path = "README.md"
+          with open(path, encoding="utf-8") as file:
+              readme = file.read()
+
+          pattern = r"<!-- ACCOUNT_METRICS_START -->.*?<!-- ACCOUNT_METRICS_END -->"
+          replacement = (
+              "<!-- ACCOUNT_METRICS_START -->\n"
+              + metrics
+              + "\n<!-- ACCOUNT_METRICS_END -->"
+          )
+          updated, count = re.subn(pattern, replacement, readme, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit("Could not find account metrics markers in README.md")
+
+          if updated != readme:
+              with open(path, "w", encoding="utf-8") as file:
+                  file.write(updated)
+          PY
+
+      - name: Commit updated badges
+        run: |
+          if git diff --quiet; then
+            echo "Profile metrics are already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update profile metrics"
+          git push
